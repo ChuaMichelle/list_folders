@@ -3,7 +3,6 @@
  */
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
-  // Or DocumentApp or FormApp.
   ui.createMenu('Custom Actions')
       .addItem('List Folders', 'main')
       .addToUi();
