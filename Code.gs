@@ -58,9 +58,11 @@ function print(data) {
     SpreadsheetApp.getActiveSheet().getRange(SpreadsheetApp.getActiveSheet().getLastRow() + 1, 1, data.length, data[0].length).setValues(data);
   } else {
     //if(SpreadsheetApp.getActiveSheet().getLastRow() <= 20) {      // uncomment for testing
-      var offset = SpreadsheetApp.getActiveSheet().getLastRow() - 1;
-      data = data.slice(offset, data.length);
+    var offset = SpreadsheetApp.getActiveSheet().getLastRow() - 1;
+    data = data.slice(offset, data.length);
+    if(data[0] != undefined) {
       SpreadsheetApp.getActiveSheet().getRange(SpreadsheetApp.getActiveSheet().getLastRow() + 1, 1, data.length, data[0].length).setValues(data);
+    }
     //}                                                             // uncomment for testing
     //else {                                                        // uncomment for testing
     //  kill();                                                     // uncomment for testing
